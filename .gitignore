@@ -3,7 +3,7 @@
 
 # Variables
 .env
-
+.gitignore
 # Archivos de sistema
 .DS_Store
 Thumbs.db
