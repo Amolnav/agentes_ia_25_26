@@ -1,0 +1,111 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "category": "Software Engineering",
+      "year": 2008,
+      "available": true
+    },
+    {
+      "id": 2,
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt, David Thomas",
+      "category": "Software Development",
+      "year": 1999,
+      "available": true
+    },
+    {
+      "id": 3,
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "category": "JavaScript",
+      "year": 2008,
+      "available": false
+    },
+    {
+      "id": 4,
+      "title": "You Don’t Know JS",
+      "author": "Kyle Simpson",
+      "category": "JavaScript",
+      "year": 2015,
+      "available": true
+    },
+    {
+      "id": 5,
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "category": "Algorithms",
+      "year": 2009,
+      "available": true
+    },
+    {
+      "id": 6,
+      "title": "Python Crash Course",
+      "author": "Eric Matthes",
+      "category": "Python",
+      "year": 2015,
+      "available": false
+    },
+    {
+      "id": 7,
+      "title": "Effective Java",
+      "author": "Joshua Bloch",
+      "category": "Java",
+      "year": 2018,
+      "available": true
+    }
+  ],
+
+  "authors": [
+    {
+      "id": 1,
+      "name": "Robert C. Martin",
+      "birthYear": 1952,
+      "nationality": "American"
+    },
+    {
+      "id": 2,
+      "name": "Andrew Hunt",
+      "birthYear": 1964,
+      "nationality": "American"
+    },
+    {
+      "id": 3,
+      "name": "David Thomas",
+      "birthYear": 1956,
+      "nationality": "British"
+    },
+    {
+      "id": 4,
+      "name": "Douglas Crockford",
+      "birthYear": 1955,
+      "nationality": "American"
+    },
+    {
+      "id": 5,
+      "name": "Kyle Simpson",
+      "birthYear": 1980,
+      "nationality": "American"
+    },
+    {
+      "id": 6,
+      "name": "Thomas H. Cormen",
+      "birthYear": 1956,
+      "nationality": "American"
+    },
+    {
+      "id": 7,
+      "name": "Eric Matthes",
+      "birthYear": 1983,
+      "nationality": "American"
+    },
+    {
+      "id": 8,
+      "name": "Joshua Bloch",
+      "birthYear": 1961,
+      "nationality": "American"
+    }
+  ]
+}
