@@ -4,7 +4,7 @@
 - [X] Crear carpeta del proyecto `manual-http-[nombre-iniciales-apellidos]`
 - [X] Inicializar proyecto con `npm init`
 - [X] Completar `package.json` (name, version, description, author)
-- [ ] Instalar dependencias: `json-server`, `dotenv`
+- [X] Instalar dependencias: `json-server`, `dotenv`
 - [ ] Configurar `package.json` con:
   - [X] `"type": "module"`
   - [ ] Script `server:up`
