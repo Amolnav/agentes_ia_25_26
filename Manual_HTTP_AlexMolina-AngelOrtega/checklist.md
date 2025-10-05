@@ -50,7 +50,7 @@
 
 ---
 
-## ⚡ Parte 4: Thunder Client (Alex)
+## ⚡ Parte 4: Thunder Client (Angel)
 - [ ] Crear colección `CRUD Students API`
 - [ ] Configurar entorno con variables (`baseUrl`, `port`, `fullUrl`)
 - [ ] Crear peticiones:
@@ -65,7 +65,7 @@
 
 ---
 
-## 📝 Parte 5: REST Client
+## 📝 Parte 5: REST Client (Alex)
 - [X] Crear archivo `peticiones-crud.http`
 - [X] Definir variables `@baseUrl`, `@port`, `@apiUrl`
 - [X] Implementar operaciones:
@@ -82,26 +82,26 @@
 
 ---
 
-## ✅ Parte 6: Script de Validación
+## ✅ Parte 6: Script de Validación (Alex)
 - [X] Crear `scripts/validate.sh`
-- [ ] Validar existencia de:
-  - [ ] `package.json`
-  - [ ] `src/db/db.json`
-  - [ ] `.gitignore`
-  - [ ] `.env.example`
-  - [ ] `README.md`
-  - [ ] `checklist.md`
-  - [ ] `peticiones-crud.http`
-  - [ ] Carpeta `src/`
-  - [ ] `src/crud-curl.js`
-  - [ ] Carpeta `images/` con ≥ 6 capturas
-  - [ ] Carpeta `scripts/`
-- [ ] Verificar en `package.json`:
-  - [ ] `"type": "module"`
-  - [ ] Dependencias `dotenv` y `json-server`
-  - [ ] Scripts `server:up` y `crud:curl`
-- [ ] Mostrar mensaje final (OK / FAIL)
-- [ ] Dar permisos de ejecución y probarlo en terminal
+- [X] Validar existencia de:
+  - [X] `package.json`
+  - [X] `src/db/db.json`
+  - [X] `.gitignore`
+  - [X] `.env.example`
+  - [X] `README.md`
+  - [X] `checklist.md`
+  - [X] `peticiones-crud.http`
+  - [X] Carpeta `src/`
+  - [X] `src/crud-curl.js`
+  - [X] Carpeta `images/` con ≥ 6 capturas
+  - [X] Carpeta `scripts/`
+- [X] Verificar en `package.json`:
+  - [X] `"type": "module"`
+  - [X] Dependencias `dotenv` y `json-server`
+  - [X] Scripts `server:up` y `crud:curl`
+- [X] Mostrar mensaje final (OK / FAIL)
+- [X] Dar permisos de ejecución y probarlo en terminal
 
 ---
 
