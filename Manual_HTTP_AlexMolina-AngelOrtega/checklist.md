@@ -7,7 +7,7 @@
 - [X] Instalar dependencias: `json-server`, `dotenv`
 - [ ] Configurar `package.json` con:
   - [X] `"type": "module"`
-  - [ ] Script `server:up`
+  - [X] Script `server:up`
   - [ ] Script `crud:curl`
   - [ ] Script `validate`
 - [X] Crear estructura de carpetas (`src/`, `scripts/`, `images/`)
