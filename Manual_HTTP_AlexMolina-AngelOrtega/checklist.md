@@ -67,18 +67,18 @@
 
 ## 📝 Parte 5: REST Client
 - [X] Crear archivo `peticiones-crud.http`
-- [ ] Definir variables `@baseUrl`, `@port`, `@apiUrl`
-- [ ] Implementar operaciones:
-  - [ ] CREATE
-  - [ ] READ ALL
-  - [ ] READ by ID
-  - [ ] READ (filtrar estudiantes activos)
-  - [ ] READ (filtrar por nivel)
-  - [ ] UPDATE (PUT)
-  - [ ] PATCH
-  - [ ] DELETE
-- [ ] Separar con `###`
-- [ ] Probar todas las peticiones
+- [X] Definir variables `@baseUrl`, `@port`, `@apiUrl`
+- [X] Implementar operaciones:
+  - [X] CREATE
+  - [X] READ ALL
+  - [X] READ by ID
+  - [X] READ (filtrar estudiantes activos)
+  - [X] READ (filtrar por nivel)
+  - [X] UPDATE (PUT)
+  - [X] PATCH
+  - [X] DELETE
+- [X] Separar con `###`
+- [X] Probar todas las peticiones
 
 ---
 

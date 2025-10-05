@@ -1,0 +1,53 @@
+@baseUrl = http://localhost
+@port = 3001
+@apiUrl = {{baseUrl}}:{{port}}
+@id = 1
+@jsonHeader = application/json
+
+### CREATE STUDENT (POST)
+POST {{apiUrl}}/students HTTP/1.1
+Content-Type: {{jsonHeader}}
+
+{
+    "name": "Nuevo Estudiante",
+    "email": "nuevo@email.com",
+    "enrollmentDate": "2025-10-05",
+    "active": true,
+    "level": "beginner"
+}
+
+### READ ALL STUDENTS (GET)
+GET {{apiUrl}}/students HTTP/1.1
+
+### READ STUDENT BY ID (GET)
+GET {{apiUrl}}/students/{{id}} HTTP/1.1
+
+### READ ACTIVE STUDENTS (GET)
+GET {{apiUrl}}/students?active=true HTTP/1.1
+
+### READ STUDENTS BY LEVEL (GET)
+GET {{apiUrl}}/students?level=intermediate HTTP/1.1
+
+### UPDATE STUDENT (PUT)
+PUT {{apiUrl}}/students/{{id}} HTTP/1.1
+Content-Type: {{jsonHeader}}
+
+{
+    "name": "María García López Updated",
+    "email": "maria.garcia@email.com",
+    "enrollmentDate": "2024-09-15",
+    "active": false,
+    "level": "advanced"
+}
+
+### PATCH STUDENT (PATCH)
+PATCH {{apiUrl}}/students/{{id}} HTTP/1.1
+Content-Type: {{jsonHeader}}
+
+{
+    "active": true,
+    "level": "intermediate"
+}
+
+### DELETE STUDENT (DELETE)
+DELETE {{apiUrl}}/students/{{id}} HTTP/1.1
