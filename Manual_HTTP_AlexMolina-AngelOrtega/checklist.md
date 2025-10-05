@@ -20,16 +20,16 @@
 
 ## 💻 Parte 2: Script CRUD con cURL (Angel)
 - [X] Crear `src/crud-curl.js`
-- [ ] Importar y configurar `dotenv`
-- [ ] Construir `BASE_URL` con variables de entorno
-- [ ] Implementar funciones con JSDoc y `console.log` de comandos:
-  - [ ] `createStudent(studentData)`
-  - [ ] `readAllStudents()`
-  - [ ] `readStudentById(id)`
-  - [ ] `updateStudent(id, studentData)`
-  - [ ] `patchStudent(id, partialData)`
-  - [ ] `deleteStudent(id)`
-- [ ] Ejecutar todas las funciones en orden al final del archivo
+- [X] Importar y configurar `dotenv`
+- [X] Construir `BASE_URL` con variables de entorno
+- [X] Implementar funciones con JSDoc y `console.log` de comandos:
+  - [X] `createStudent(studentData)`
+  - [X] `readAllStudents()`
+  - [X] `readStudentById(id)`
+  - [X] `updateStudent(id, studentData)`
+  - [X] `patchStudent(id, partialData)`
+  - [X] `deleteStudent(id)`
+- [X] Ejecutar todas las funciones en orden al final del archivo
 
 ---
 
