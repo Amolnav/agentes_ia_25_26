@@ -24,7 +24,7 @@ console.log(`BASE_URL configurada: ${BASE_URL}`);
  * }
  */
 function createStudent(studentData) {
-    const command = `curl -X POST ${BASE_URL}/students -H "Content-Type: application/json" -d "{\"id\": ${studentData.id}, \"name\": \"${studentData.name}\", \"email\": \"${studentData.email}\", \"enrollmentDate\": \"${studentData.enrollmentDate}\", \"active\": ${studentData.active}, \"level\": \"${studentData.level}\"}"`;
+    const command = `curl -i -X POST ${BASE_URL}/students -H "Content-Type: application/json" -d '{\"id\": ${studentData.id}, \"name\": \"${studentData.name}\", \"email\": \"${studentData.email}\", \"enrollmentDate\": \"${studentData.enrollmentDate}\", \"active\": ${studentData.active}, \"level\": \"${studentData.level}\"}'`;
     console.log(command);
     console.log("-------------------------------------------")
 }
@@ -33,7 +33,7 @@ function createStudent(studentData) {
  * Lee todos los estudiantes
  */
 function readAllStudents() {
-    const command = `curl -X GET ${BASE_URL}/students`;
+    const command = `curl -i -X GET ${BASE_URL}/students -H "Accept: application/json"`;
     console.log(command);
     console.log("-------------------------------------------")
 }
@@ -43,7 +43,7 @@ function readAllStudents() {
  * @param {number} id - ID del estudiante a consultar
  */
 function readStudentById(id) {
-    const command = `curl -X GET ${BASE_URL}/students/${id}`;
+    const command = `curl -i -X GET ${BASE_URL}/students/${id} -H "Accept: application/json"`;
     console.log(command);
     console.log("-------------------------------------------")
 }
@@ -54,7 +54,7 @@ function readStudentById(id) {
  * @param {Object} studentData - Objeto con los datos completos del estudiante
  */
 function updateStudent(id, studentData) {
-    const command = `curl -X PUT ${BASE_URL}/students/${id} -H "Content-Type: application/json" -d "{\"id\": ${studentData.id}, \"name\": \"${studentData.name}\", \"email\": \"${studentData.email}\", \"enrollmentDate\": \"${studentData.enrollmentDate}\", \"active\": ${studentData.active}, \"level\": \"${studentData.level}\"}"`;
+    const command = `curl -i -X PUT ${BASE_URL}/students/${id} -H "Content-Type: application/json" -d '{\"id\": ${studentData.id}, \"name\": \"${studentData.name}\", \"email\": \"${studentData.email}\", \"enrollmentDate\": \"${studentData.enrollmentDate}\", \"active\": ${studentData.active}, \"level\": \"${studentData.level}\"}'`;
     console.log(command);
     console.log("-------------------------------------------")
 }
@@ -66,7 +66,7 @@ function updateStudent(id, studentData) {
  */
 function patchStudent(id, partialData) {
     const jsonData = JSON.stringify(partialData);
-    const command = `curl -X PATCH ${BASE_URL}/${id} -H "Content-Type: application/json" -d '${jsonData}'`;
+    const command = `curl -i -X PATCH ${BASE_URL}/students/${id} -H "Content-Type: application/json" -d '${jsonData}'`;
     console.log(command);
     console.log("-------------------------------------------")
 }
@@ -78,7 +78,7 @@ function patchStudent(id, partialData) {
  *  @param {number|string} id - ID del estudiante a eliminar
  */
 function deleteStudent(id) {
-    const command = `curl -X DELETE ${BASE_URL}/students/${id}`;
+    const command = `curl -i -X DELETE ${BASE_URL}/students/${id} -H "Accept: application/json"`;
     console.log(command);
     console.log("-------------------------------------------")
 }
@@ -105,7 +105,7 @@ createStudent(newStudent);
 console.log("Leer todos los estudiantes");
 readAllStudents();
 console.log("Leer un estudiante especifico");
-readStudentById(8);
+readStudentById(1);
 console.log("Actualización de estudiante");
 updateStudent(1, {
     id: 1,
@@ -116,9 +116,9 @@ updateStudent(1, {
     level: "advanced"
 });
 console.log("Actualización parcial de estudiante");
-patchStudent(8, { level: "expert" });
+patchStudent(1, { level: "expert" });
 console.log("Eliminación de estudiante");
-deleteStudent(8);
+deleteStudent(5);
 
 console.log("========================================");
 
