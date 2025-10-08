@@ -252,5 +252,117 @@ Porque indica la eliminación de un recurso existente.
 | **404 Not Found**             | Recurso no encontrado.                | No existe ningún recurso con ese ID.               |
 | **500 Internal Server Error** | Error en el servidor.                 | Falla al intentar eliminar el recurso.             |
 
+---
+# Uso de la API con Thunder Client
 
+A continuación, se detalla cómo interactuar con los diferentes endpoints de la API utilizando la extensión **Thunder Client** en Visual Studio Code. Para cada operación, se incluye el método HTTP, la URL, un ejemplo del cuerpo (`Body`) si es necesario, y la respuesta esperada.
+
+---
+
+## CREATE Student (POST)
+
+Para crear un nuevo estudiante, realiza una petición `POST` al endpoint `/students`. En el cuerpo de la petición, envía un objeto JSON con los datos del nuevo estudiante. El `id` se genera automáticamente por el servidor.
+
+* **Método:** `POST`
+* **URL:** `http://localhost:4000/students`
+* **Body:**
+
+    ```json
+    {
+        "id": 8,
+        "name": "Maria Garcia López",
+        "email": "maria.garcia@email.com",
+        "enrollmentDate": "2024-09-15",
+        "active": true,
+        "level": "intermediate"
+    }
+    ```
+
+La API devolverá un código de estado `201 Created` y el objeto del estudiante recién creado, incluyendo su nuevo `id`.
+
+![Crear un post con Thunder Client](./images/ThunderPOST.png)
+
+---
+
+## GET All Students (GET)
+
+Para obtener un listado de todos los estudiantes, realiza una petición `GET` al endpoint `/students`. No se requiere enviar un cuerpo en la petición.
+
+* **Método:** `GET`
+* **URL:** `http://localhost:4000/students`
+
+La API devolverá un código de estado `200 OK` y un array con todos los objetos de los estudiantes.
+
+![Seleccionar todos los estudiantes con Thunder Client](./images/ThunderGETALL.png)
+
+---
+
+## GET Student by ID (GET)
+
+Para obtener los detalles de un estudiante específico, realiza una petición `GET` al endpoint `/students/{id}`, reemplazando `{id}` con el identificador del estudiante que deseas consultar.
+
+* **Método:** `GET`
+* **URL:** `http://localhost:4000/students/2`
+
+La API devolverá un código de estado `200 OK` y el objeto JSON con los datos del estudiante solicitado.
+
+![Seleccionar un estudiante con Thunder Client](./images/ThunderGetById.png)
+
+---
+
+## UPDATE Student (PUT)
+
+Para actualizar **completamente** la información de un estudiante, utiliza una petición `PUT`. Debes enviar el objeto completo del estudiante en el cuerpo, ya que esta operación reemplaza todo el recurso.
+
+* **Método:** `PUT`
+* **URL:** `http://localhost:4000/students/2`
+* **Body:**
+
+    ```json
+    {
+        "id": "2",
+        "name": "Carlos Rodriguez Martin",
+        "email": "carlos.rodriguez@email.com",
+        "enrollmentDate": "2024-10-01",
+        "active": false,
+        "level": "beginner"
+    }
+    ```
+
+La API responderá con un código `200 OK` y el objeto del estudiante con los datos ya actualizados.
+
+![Actualizar un estudiante (PUT) con Thunder Client](./images/ThunderPUT.png)
+
+---
+
+## PATCH Student (PATCH)
+
+Si solo necesitas actualizar uno o varios campos de un estudiante (actualización parcial), utiliza una petición `PATCH`. En el cuerpo de la petición, envía únicamente los campos que deseas modificar.
+
+* **Método:** `PATCH`
+* **URL:** `http://localhost:4000/students/2`
+* **Body:**
+
+    ```json
+    {
+        "enrollmentDate": "2024-12-21"
+    }
+    ```
+
+La API devolverá un código `200 OK` y el objeto completo del estudiante con los campos actualizados.
+
+![Actualizar algun/algunos campos de estudiante (PUT) con Thunder Client](./images/ThunderPATCH.png)
+
+---
+
+## DELETE Student (DELETE)
+
+Para eliminar un estudiante, realiza una petición `DELETE` al endpoint `/students/{id}`, especificando el `id` del estudiante que quieres borrar.
+
+* **Método:** `DELETE`
+* **URL:** `http://localhost:4000/students/2`
+
+Si la eliminación es exitosa, la API devolverá un código `200 OK`, generalmente con un cuerpo vacío o con el objeto del estudiante que acaba de ser eliminado como confirmación.
+
+![Eliminar un estudiante (PUT) con Thunder Client](./images/ThunderDELETE.png)
 

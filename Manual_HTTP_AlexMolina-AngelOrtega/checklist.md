@@ -8,10 +8,10 @@
 - [ ] Configurar `package.json` con:
   - [X] `"type": "module"`
   - [X] Script `server:up`
-  - [ ] Script `crud:curl`
-  - [ ] Script `validate`
+  - [X] Script `crud:curl`
+  - [X] Script `validate`
 - [X] Crear estructura de carpetas (`src/`, `scripts/`, `images/`)
-- [ ] Crear archivo `.env` con variables: PORT, API_BASE_URL, NODE_ENV
+- [X] Crear archivo `.env` con variables: PORT, API_BASE_URL, NODE_ENV
 - [X] Crear `.env.example`
 - [X] Crear `.gitignore` adecuado
 - [X] Crear `src/db/db.json` con datos de ejemplo (students, courses, enrollments)
@@ -51,17 +51,17 @@
 ---
 
 ## ⚡ Parte 4: Thunder Client (Angel)
-- [ ] Crear colección `CRUD Students API`
-- [ ] Configurar entorno con variables (`baseUrl`, `port`, `fullUrl`)
-- [ ] Crear peticiones:
-  - [ ] CREATE Student (POST)
-  - [ ] GET All Students (GET)
-  - [ ] GET Student by ID (GET)
-  - [ ] UPDATE Student (PUT)
-  - [ ] PATCH Student (PATCH)
-  - [ ] DELETE Student (DELETE)
-- [ ] Capturas de cada petición guardadas en `/images`
-- [ ] Documentar en `README.md` con capturas y explicación
+- [X] Crear colección `CRUD Students API`
+- [X] Configurar entorno con variables (`baseUrl`, `port`, `fullUrl`)
+- [X] Crear peticiones:
+  - [X] CREATE Student (POST)
+  - [X] GET All Students (GET)
+  - [X] GET Student by ID (GET)
+  - [X] UPDATE Student (PUT)
+  - [X] PATCH Student (PATCH)
+  - [X] DELETE Student (DELETE)
+- [X] Capturas de cada petición guardadas en `/images`
+- [X] Documentar en `README.md` con capturas y explicación
 
 ---
 
@@ -123,7 +123,7 @@
 ---
 
 ## 📊 Parte 8: Validación Final
-- [ ] Pasar script de validación sin errores
+- [X] Pasar script de validación sin errores
 - [ ] Entregar PR antes de la fecha límite
 - [X] Confirmar que `.env` NO está en el repo
 
