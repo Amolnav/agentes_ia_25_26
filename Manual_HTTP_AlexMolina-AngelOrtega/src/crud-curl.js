@@ -24,7 +24,7 @@ console.log(`BASE_URL configurada: ${BASE_URL}`);
  * }
  */
 function createStudent(studentData) {
-    const command = `curl -i -X POST ${BASE_URL}/students -H "Content-Type: application/json" -d '{\"id\": ${studentData.id}, \"name\": \"${studentData.name}\", \"email\": \"${studentData.email}\", \"enrollmentDate\": \"${studentData.enrollmentDate}\", \"active\": ${studentData.active}, \"level\": \"${studentData.level}\"}'`;
+    const command = `curl -i -X POST ${BASE_URL}/students -H "Content-Type: application/json" -d '${JSON.stringify(studentData)}'`;
     console.log(command);
     console.log("-------------------------------------------")
 }
@@ -54,7 +54,7 @@ function readStudentById(id) {
  * @param {Object} studentData - Objeto con los datos completos del estudiante
  */
 function updateStudent(id, studentData) {
-    const command = `curl -i -X PUT ${BASE_URL}/students/${id} -H "Content-Type: application/json" -d '{\"id\": ${studentData.id}, \"name\": \"${studentData.name}\", \"email\": \"${studentData.email}\", \"enrollmentDate\": \"${studentData.enrollmentDate}\", \"active\": ${studentData.active}, \"level\": \"${studentData.level}\"}'`;
+    const command = `curl -i -X PUT ${BASE_URL}/students/${id} -H "Content-Type: application/json" -d '${JSON.stringify(studentData)}'`;
     console.log(command);
     console.log("-------------------------------------------")
 }
@@ -87,7 +87,7 @@ function deleteStudent(id) {
 
 // Datos de ejemplo
 const newStudent = {
-    id: 8,
+    id: "8",
     name: "María García López",
     email: "maria.garcia@email.com",
     enrollmentDate: "2024-09-15",
@@ -108,7 +108,7 @@ console.log("Leer un estudiante especifico");
 readStudentById(1);
 console.log("Actualización de estudiante");
 updateStudent(1, {
-    id: 1,
+    id: "1",
     name: "María García López",
     email: "maria.garcia@email.com",
     enrollmentDate: "2024-09-15",

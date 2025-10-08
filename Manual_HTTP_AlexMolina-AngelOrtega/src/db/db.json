@@ -2,7 +2,7 @@
   "students": [
     {
       "id": "1",
-      "name": "Mar�a Garc�a L�pez",
+      "name": "Maria Garcia Lopez",
       "email": "maria.garcia@email.com",
       "enrollmentDate": "2024-09-15",
       "active": false,
@@ -12,8 +12,8 @@
       "id": "2",
       "name": "Carlos Rodríguez Martín",
       "email": "carlos.rodriguez@email.com",
-      "enrollmentDate": "2024-10-01",
-      "active": true,
+      "enrollmentDate": "2024-12-21",
+      "active": false,
       "level": "beginner"
     },
     {
@@ -46,30 +46,6 @@
       "email": "elena.diaz@email.com",
       "enrollmentDate": "2024-09-05",
       "active": false,
-      "level": "intermediate"
-    },
-    {
-      "id": 8,
-      "name": "Mar�a Garc�a L�pez",
-      "email": "maria.garcia@email.com",
-      "enrollmentDate": "2024-09-15",
-      "active": true,
-      "level": "intermediate"
-    },
-    {
-      "id": 8,
-      "name": "Mar�a Garc�a L�pez",
-      "email": "maria.garcia@email.com",
-      "enrollmentDate": "2024-09-15",
-      "active": true,
-      "level": "intermediate"
-    },
-    {
-      "id": 8,
-      "name": "Mar�a Garc�a L�pez",
-      "email": "maria.garcia@email.com",
-      "enrollmentDate": "2024-09-15",
-      "active": true,
       "level": "intermediate"
     }
   ],
