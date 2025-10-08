@@ -293,7 +293,7 @@ Para obtener un listado de todos los estudiantes, realiza una petición `GET` al
 
 La API devolverá un código de estado `200 OK` y un array con todos los objetos de los estudiantes.
 
-![Seleccionar todos los estudiantes con Thunder Client](./images/ThunderGETALL.png)
+![Seleccionar todos los estudiantes con Thunder Client](./images/ThunderGetALL.png)
 
 ---
 
