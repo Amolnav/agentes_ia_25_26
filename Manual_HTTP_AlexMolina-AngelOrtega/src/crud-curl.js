@@ -1,5 +1,6 @@
 // Importaciones
 import dotenv from "dotenv";
+import { exec } from "node:child_process";
 
 // Cargo las variables .env a este fichero
 dotenv.config();
@@ -24,18 +25,45 @@ console.log(`BASE_URL configurada: ${BASE_URL}`);
  * }
  */
 function createStudent(studentData) {
-    const command = `curl -i -X POST ${BASE_URL}/students -H "Content-Type: application/json" -d '${JSON.stringify(studentData)}'`;
-    console.log(command);
-    console.log("-------------------------------------------")
+    const jsonData = JSON.stringify(studentData).replace(/"/g, '\\"');
+    const command = `curl -s -X POST "${BASE_URL}/students" -H "Content-Type: application/json" -d "${jsonData}"`;
+
+
+    exec(command, (error,stdout,stderr) => {
+            if(error){
+                console.error("Error ejecutando el curl: ", error.message);
+                return;
+            }
+            if (stderr && stderr.trim() !== "") {
+                console.error("Error en la salida: ", stderr);
+                return;
+            }
+            const data = JSON.parse(stdout);
+            console.log(command)
+            console.table(data)
+            console.log("-------------------------------------------")
+        })
 }
 
 /**
  * Lee todos los estudiantes
  */
 function readAllStudents() {
-    const command = `curl -i -X GET ${BASE_URL}/students -H "Accept: application/json"`;
-    console.log(command);
-    console.log("-------------------------------------------")
+    const command = `curl -s -X GET ${BASE_URL}/students -H "Accept: application/json"`;
+    exec(command, (error,stdout,stderr) => {
+            if(error){
+                console.error("Error ejecutando el curl: ", error.message);
+                return;
+            }
+            if (stderr && stderr.trim() !== "") {
+                console.error("Error en la salida: ", stderr);
+                return;
+            }
+            const data = JSON.parse(stdout);
+            console.log(command)
+            console.table(data)
+            console.log("-------------------------------------------")
+        })
 }
 
 /**
@@ -43,9 +71,21 @@ function readAllStudents() {
  * @param {number} id - ID del estudiante a consultar
  */
 function readStudentById(id) {
-    const command = `curl -i -X GET ${BASE_URL}/students/${id} -H "Accept: application/json"`;
-    console.log(command);
-    console.log("-------------------------------------------")
+    const command = `curl -s -X GET ${BASE_URL}/students/${id} -H "Accept: application/json"`;
+    exec(command, (error,stdout,stderr) => {
+            if(error){
+                console.error("Error ejecutando el curl: ", error.message);
+                return;
+            }
+            if (stderr && stderr.trim() !== "") {
+                console.error("Error en la salida: ", stderr);
+                return;
+            }
+            const data = JSON.parse(stdout);
+            console.log(command)
+            console.table(data)
+            console.log("-------------------------------------------")
+        })
 }
 
 /**
@@ -54,9 +94,24 @@ function readStudentById(id) {
  * @param {Object} studentData - Objeto con los datos completos del estudiante
  */
 function updateStudent(id, studentData) {
-    const command = `curl -i -X PUT ${BASE_URL}/students/${id} -H "Content-Type: application/json" -d '${JSON.stringify(studentData)}'`;
-    console.log(command);
-    console.log("-------------------------------------------")
+    const jsonData = JSON.stringify(studentData).replace(/"/g, '\\"');
+
+    const command = `curl -s -X PUT "${BASE_URL}/students/${id}" -H "Content-Type: application/json" -d "${jsonData}"`;
+
+    exec(command, (error,stdout,stderr) => {
+            if(error){
+                console.error("Error ejecutando el curl: ", error.message);
+                return;
+            }
+            if (stderr && stderr.trim() !== "") {
+                console.error("Error en la salida: ", stderr);
+                return;
+            }
+            const data = JSON.parse(stdout);
+            console.log(command)
+            console.table(data)
+            console.log("-------------------------------------------")
+        })
 }
 
 /**
@@ -65,10 +120,23 @@ function updateStudent(id, studentData) {
  * @param {Object} partialData - Objeto con los datos a modificar
  */
 function patchStudent(id, partialData) {
-    const jsonData = JSON.stringify(partialData);
-    const command = `curl -i -X PATCH ${BASE_URL}/students/${id} -H "Content-Type: application/json" -d '${jsonData}'`;
-    console.log(command);
-    console.log("-------------------------------------------")
+    const jsonData = JSON.stringify(partialData).replace(/"/g, '\\"');
+    const command = `curl -s -X PATCH "${BASE_URL}/students/${id}" -H "Content-Type: application/json" -d "${jsonData}"`;
+
+    exec(command, (error,stdout,stderr) => {
+            if(error){
+                console.error("Error ejecutando el curl: ", error.message);
+                return;
+            }
+            if (stderr && stderr.trim() !== "") {
+                console.error("Error en la salida: ", stderr);
+                return;
+            }
+            const data = JSON.parse(stdout);
+            console.log(command)
+            console.table(data)
+            console.log("-------------------------------------------")
+        })
 }
 
 
@@ -78,9 +146,21 @@ function patchStudent(id, partialData) {
  *  @param {number|string} id - ID del estudiante a eliminar
  */
 function deleteStudent(id) {
-    const command = `curl -i -X DELETE ${BASE_URL}/students/${id} -H "Accept: application/json"`;
-    console.log(command);
-    console.log("-------------------------------------------")
+    const command = `curl -s -X DELETE ${BASE_URL}/students/${id} -H "Accept: application/json"`;
+    exec(command, (error,stdout,stderr) => {
+            if(error){
+                console.error("Error ejecutando el curl: ", error.message);
+                return;
+            }
+            if (stderr && stderr.trim() !== "") {
+                console.error("Error en la salida: ", stderr);
+                return;
+            }
+            const data = JSON.parse(stdout);
+            console.log(command)
+            console.table(data)
+            console.log("-------------------------------------------")
+        })
 }
 
 
@@ -118,7 +198,7 @@ updateStudent(1, {
 console.log("Actualización parcial de estudiante");
 patchStudent(1, { level: "expert" });
 console.log("Eliminación de estudiante");
-deleteStudent(5);
+deleteStudent(8);
 
 console.log("========================================");
 
