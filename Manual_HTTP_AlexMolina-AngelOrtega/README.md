@@ -251,7 +251,10 @@ Porque indica la eliminación de un recurso existente.
 | **403 Forbidden**             | Sin permisos.                         | Usuario autenticado pero sin permiso de borrar.    |
 | **404 Not Found**             | Recurso no encontrado.                | No existe ningún recurso con ese ID.               |
 | **500 Internal Server Error** | Error en el servidor.                 | Falla al intentar eliminar el recurso.             |
+---
+## SCRIPT CRUD:CURL
 
+![imagen DELETE](./images/scriptCURL.png)
 ---
 # Uso de la API con Thunder Client
 
@@ -366,3 +369,9 @@ Si la eliminación es exitosa, la API devolverá un código `200 OK`, generalmen
 
 ![Eliminar un estudiante (PUT) con Thunder Client](./images/ThunderDELETE.png)
 
+
+# REST CLIENT
+## GET ALL
+![Accion GET en REST CLIENT](./images/RESTGET.png)
+## GET BY ID
+![Accion GET BY ID en REST CLIEN](./images/RESTGETID.png)
