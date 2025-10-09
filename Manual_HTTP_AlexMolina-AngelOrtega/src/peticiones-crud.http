@@ -1,5 +1,5 @@
 @baseUrl = http://localhost
-@port = 3001
+@port = 4000
 @apiUrl = {{baseUrl}}:{{port}}
 @id = 1
 @jsonHeader = application/json
