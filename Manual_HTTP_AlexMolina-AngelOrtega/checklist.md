@@ -1,11 +1,11 @@
 # ✅ Checklist de Progreso - CRUD HTTP Manual y Herramientas Visuales
 
-## 🏗 Parte 1: Configuración inicial del proyecto
+## 🏗 Parte 1: Configuración inicial del proyecto (Angel y Alex)
 - [X] Crear carpeta del proyecto `manual-http-[nombre-iniciales-apellidos]`
 - [X] Inicializar proyecto con `npm init`
 - [X] Completar `package.json` (name, version, description, author)
 - [X] Instalar dependencias: `json-server`, `dotenv`
-- [ ] Configurar `package.json` con:
+- [X] Configurar `package.json` con:
   - [X] `"type": "module"`
   - [X] Script `server:up`
   - [X] Script `crud:curl`
@@ -33,7 +33,7 @@
 
 ---
 
-## 📚 Parte 3: Documentación CRUD con cURL
+## 📚 Parte 3: Documentación CRUD con cURL (Angel)
 - [x] Documentar en `README.md` cada operación:
   - [x] CREATE
   - [x] READ ALL
@@ -50,7 +50,7 @@
 
 ---
 
-## ⚡ Parte 4: Thunder Client (Angel)
+## ⚡ Parte 4: Thunder Client (Angel y Alex)
 - [X] Crear colección `CRUD Students API`
 - [X] Configurar entorno con variables (`baseUrl`, `port`, `fullUrl`)
 - [X] Crear peticiones:
@@ -110,13 +110,13 @@
 - [X] Añadir al profesor como colaborador
 - [X] Inicializar Git local y conectar con remoto
 - [X] Crear rama `m1/http-request-response`
-- [ ] Hacer commits incrementales (feat:, docs:, fix:, etc.)
-- [ ] Crear Pull Request hacia `main` con:
-  - [ ] Resumen de implementación
-  - [ ] División del trabajo 
-  - [ ] Dificultades y soluciones
-  - [ ] Características completadas
-- [ ] Asignar al profesor como reviewer
+- [X] Hacer commits incrementales (feat:, docs:, fix:, etc.)
+- [X] Crear Pull Request hacia `main` con:
+  - [X] Resumen de implementación
+  - [X] División del trabajo 
+  - [X] Dificultades y soluciones
+  - [X] Características completadas
+- [X] Asignar al profesor como reviewer
 - [ ] Tras aprobación: merge en `main` y actualizar local
 - [ ] Crear tag `M1/http-request-response` y subirlo
 
@@ -124,7 +124,7 @@
 
 ## 📊 Parte 8: Validación Final
 - [X] Pasar script de validación sin errores
-- [ ] Entregar PR antes de la fecha límite
+- [X] Entregar PR antes de la fecha límite
 - [X] Confirmar que `.env` NO está en el repo
 
 ---
